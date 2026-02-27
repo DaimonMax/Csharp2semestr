@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Pr1;
-internal class Program
+
+namespace Pr1
 {
-    static void Main(string[] args)
+    internal class Ex2
     {
-        Ex1.RunEx1();
+        internal static void RunEx2()
+        {
+
+        }
     }
 }
-
