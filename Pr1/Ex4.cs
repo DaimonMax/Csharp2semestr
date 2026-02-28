@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Pr1
 {
-    internal class Ex1
+    internal class Ex4
     {
-        internal static void RunEx1()
+        internal static void RunEx4()
         {
-            Console.WriteLine("---------------------------------------------------");
-            MathOperation operation = Add;
+            // 1
+            operation = Add;
             double result = operation(4, 5);
             Console.WriteLine(result);
 
@@ -33,10 +33,20 @@ namespace Pr1
             {
                 Console.WriteLine(ex.Message);
             }
+            // 2
+            Console.WriteLine("===================================================");
+            List<String> names = ["Alice", "Bob", "Charlie", "David", "Eve", "Elena"];
+            char letter = 'E';
+            var students = names.FindAll(name => name.StartsWith(letter));
+            Console.WriteLine($"Students: '{letter}':");
+            foreach (var item in students)
+            {
+                Console.WriteLine(item);
+            }
             Console.WriteLine("---------------------------------------------------");
         }
 
-        private delegate double MathOperation(double a, double b);
+        private static Func<double, double, double>? operation;
 
         private static double Add(double a, double b) => a + b;
         private static double Substract(double a, double b) => a - b;
@@ -46,7 +56,5 @@ namespace Pr1
             if (b == 0) throw new DivideByZeroException();
             return a / b;
         }
-
-
     }
 }
