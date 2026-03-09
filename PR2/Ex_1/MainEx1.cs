@@ -18,6 +18,7 @@ namespace PR2.Ex_1
             TemperatureDatchik.ChangeTemperature(200);
             TemperatureDatchik.ChangeTemperature(-10);
             TemperatureDatchik.ChangeTemperature(20);
+            Console.WriteLine("==============================================================");
         }
     }
 }
