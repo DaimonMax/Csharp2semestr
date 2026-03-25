@@ -4,7 +4,39 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            RunEx2();
+        }
+
+        static void RunEx2()
+        {
+            string path = @"D:\C# exercises\2 semestr\files";
+
+            if (!Directory.Exists(path))
+            {
+                Console.WriteLine("Папка не знайдена");
+                return;
+            }
+
+            //Console.WriteLine("=== ПІДПАПКИ ===");
+            string[] directories = Directory.GetDirectories(path);
+
+            foreach (string dir in directories)
+            {
+                Console.WriteLine(dir);
+            }
+
+            //Console.WriteLine("\n=== ФАЙЛИ ===");
+            string[] files = Directory.GetFiles(path);
+
+            foreach (string file in files)
+            {
+                FileInfo info = new(file);
+
+                Console.WriteLine($"Назва: {info.Name}");
+                Console.WriteLine($"Розмір: {info.Length}");
+                Console.WriteLine($"Дата створення: {info.CreationTime}");
+                Console.WriteLine("----------------------------------------------------------------");
+            }
         }
     }
 }
