@@ -17,7 +17,6 @@
                 return;
             }
 
-            //Console.WriteLine("=== ПІДПАПКИ ===");
             string[] directories = Directory.GetDirectories(path);
 
             foreach (string dir in directories)
@@ -25,7 +24,6 @@
                 Console.WriteLine(dir);
             }
 
-            //Console.WriteLine("\n=== ФАЙЛИ ===");
             string[] files = Directory.GetFiles(path);
 
             foreach (string file in files)
