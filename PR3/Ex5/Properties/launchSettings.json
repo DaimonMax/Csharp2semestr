@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Ex5": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\C# exercises\\2 semestr\\files\"\r\n"
+    }
+  }
+}

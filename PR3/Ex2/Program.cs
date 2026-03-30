@@ -2,8 +2,10 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.InputEncoding = System.Text.Encoding.UTF8;
             RunEx2();
         }
 
@@ -33,7 +35,6 @@
                 Console.WriteLine($"Назва: {info.Name}");
                 Console.WriteLine($"Розмір: {info.Length}");
                 Console.WriteLine($"Дата створення: {info.CreationTime}");
-                Console.WriteLine("----------------------------------------------------------------");
             }
         }
     }

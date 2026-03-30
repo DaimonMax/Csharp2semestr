@@ -2,8 +2,10 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.InputEncoding = System.Text.Encoding.UTF8;
             RunEx1();
         }
 
@@ -33,9 +35,9 @@
 
             using (StreamWriter writer = new(outputFilePath))
             {
-                writer.WriteLine($"рядки: {lineCount}");
-                writer.WriteLine($"слова: {wordCount}");
-                writer.WriteLine($"символи: {charCount}");
+                writer.WriteLine($"Рядки: {lineCount}");
+                writer.WriteLine($"Слова: {wordCount}");
+                writer.WriteLine($"Символи: {charCount}");
             }
         }
     }
